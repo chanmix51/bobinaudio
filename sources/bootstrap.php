@@ -34,17 +34,17 @@ $app->register(new \Pomm\Silex\PommServiceProvider(), array(
 
 // Service container customization. 
 $app['loader'] = $loader;
-$app['pomm.connection'] = $app['pomm']
+$app['pomm.connection'] = $app->share(function() use ($app) { return $app['pomm']
     ->getDatabase()
-    ->createConnection();
+    ->createConnection(); });
 
 // set DEBUG mode or not
 if (preg_match('/^dev/', ENV))
 {
     $app['debug'] = true;
-    $app['pomm.logger'] = $app->share(function() { return new Pomm\Tools\Logger(); });
-    $app['pomm.connection']
-        ->registerFilter(new Pomm\FilterChain\LoggerFilter($app['pomm.logger']));
+//    $app['pomm.logger'] = $app->share(function() { return new Pomm\Tools\Logger(); });
+//    $app['pomm.connection']
+//        ->registerFilter(new Pomm\FilterChain\LoggerFilter($app['pomm.logger']));
 }
 
 return $app;

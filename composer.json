@@ -1,0 +1,8 @@
+{
+    "minimum-stability": "dev",
+    "require": {
+        "pomm/pomm-service-provider": "dev-master",
+        "twig/twig": "dev-master",
+        "silex/silex": "1.*"
+    }
+}

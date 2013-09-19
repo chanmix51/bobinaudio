@@ -1,0 +1,4 @@
+vendor/*
+.ctags
+sources/lib/Model/BobinAudio/Transfo/Base/*
+sources/config/config.php

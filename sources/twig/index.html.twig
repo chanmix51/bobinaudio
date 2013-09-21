@@ -1,6 +1,26 @@
-<html>
-<body>
-<h1>Hello world</h1>
-<p>Your Silex application is up and running and your database connection is working.</p>
-</body>
-</html>
+{% extends "layout.html.twig" %}
+
+{% block content %}
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Bobinaudio</h1>
+        <p>Spécialiste des transformateurs audio pour amplificateurs à tubes.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-offset-3">
+        <img src="/images/transfo1.jpg" />
+        </div> <!-- span -->
+      </div><!-- row -->
+      <hr />
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Un soin particulier est apporté à l'optimisation des bobinages et à l'équilibre Fer/Cuivre afin de réduire au minimum les capacités parasites. Ainsi, les amplificateurs équipés de ces transformateurs présentent une réponse accrue aux fréquences élevées sans aucune dégradation des fréquences basses, un respect total de la phase et une stabilité irréprochable.</p>
+        </div> <!--span -->
+      </div><!-- row -->
+
+      <hr>
+
+      <footer>
+        <p>Bobinaudio 2013</p>
+      </footer>
+{% endblock %}

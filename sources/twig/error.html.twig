@@ -1,0 +1,13 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="alert alert-danger">
+          <h2>{{ error }}</h2>
+          <p>{{ message }}</p>
+        </div><!-- alert -->
+        <p><a href="{{ app.url_generator.generate('index') }}">Cliquez ici</a> pour revenir à la page d'accueil.</p>
+      </div><!-- col -->
+    </div><!-- row -->
+{% endblock %}

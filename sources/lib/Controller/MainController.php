@@ -33,7 +33,7 @@ class MainController implements ControllerProviderInterface
 
         $this->app['session']->set('culture', $culture);
 
-        return $this->app->redirect($referrer);
+        return $this->app->redirect($this->app['url_generator']->generate('index'));
     }
 
     public function index()
